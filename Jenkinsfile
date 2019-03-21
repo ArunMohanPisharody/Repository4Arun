@@ -1,6 +1,6 @@
 node{
 stage('SCM Checkout'){
-git 'https://github.com/ArunMohanPisharody'
+git 'https://github.com/ArunMohanPisharody/Repository4Arun'
 }
 stage('Compile-Package'){
 //Get Maven home path
