@@ -1,0 +1,21 @@
+provider "aws" {
+  access_key = "AKIAZSWTPNWDTUM5KWXG"
+  secret_key = "cHZqbTKan9JT70WjAHh5lvT7w7Yj8znzMlDT0Zoc"
+  region     = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-2757f631"
+  instance_type = "t2.micro"
+}
+
+resource "aws_db_instance" "database" {
+  allocated_storage = 5
+  engine = "MySQL"
+  engine_version = "5.7.22"
+  identifier = "mydb1"
+  instance_class = "db.t2.micro"
+  name = "mydb1"
+  username = "mydb1"
+  password = "12345678"
+}
